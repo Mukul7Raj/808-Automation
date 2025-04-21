@@ -1,41 +1,43 @@
-# 808-Automation
 # 🎧 BeatBoost: Auto-Add Focus-Driven Rap Tracks to Your Spotify Playlist
 
-BeatBoost is a Python-based productivity hack that automatically adds handpicked, motivational rap songs to your Spotify playlist to fuel deep work, hustle mode, and creative flow.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![Spotipy Version](https://img.shields.io/badge/spotipy-2.23.0-green)](https://spotipy.readthedocs.io/)
 
-🚀 Built for creators, coders, students, and grinders who thrive on **focus + fire beats**.
+BeatBoost is your AI-powered productivity sidekick that automagically curates high-energy rap tracks into your Spotify playlist. Perfect for coding marathons, gym sessions, or anytime you need **lyrical fuel for your grind**. 🔥
+
+![Playlist Preview](assets/preview.png)
 
 ---
 
-## ⚡ Features
+## 🚀 Features
 
-- 🔥 Automatically adds curated rap tracks to your Spotify playlist
-- 💡 Uses Spotify API and Spotipy
-- 🎵 Fully customizable – you can change the vibe or playlist anytime
-- 🧠 Perfect for building, coding, studying, or working out
+- ⚡ **Auto-Curation**: Smartly adds motivational rap tracks based on your preferences
+- 🎛️ **Customizable Vibe**: Choose between focus mode, workout beats, or creative flow
+- 🔄 **Daily Updates**: Keep your playlist fresh with automated weekly refreshes
+- 🤖 **Surprise Me Mode**: Discover new tracks with AI-powered recommendations
+- 🔒 **Privacy First**: No data collection - runs entirely through Spotify's API
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python 3
-- Spotipy (Spotify Web API wrapper)
+- **Python 3** (Core scripting)
+- **Spotipy** (Spotify Web API wrapper)
+- **Spotify Web API** (Playlist management and track analysis)
+- **argparse** (Command-line interface configuration)
 
 ---
 
-## 🧪 Demo
+## 📦 Installation & Setup
 
-> Here’s a sample playlist it can generate:  
-> 🎵 [BeatBoost Playlist](https://open.spotify.com/playlist/7erOnbEBwtmXjrayPiU8k0)
+### Prerequisites
+- Spotify Premium account
+- Python 3.8+ installed
+- Developer access to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
 
-![preview](assets/preview.png) <!-- optional image -->
-
----
-
-## 🔧 Setup Instructions
-
-### 1. Clone this repo
-
+### Step 1: Clone Repository
 ```bash
 git clone https://github.com/your-username/BeatBoost.git
 cd BeatBoost
+
+
