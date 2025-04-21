@@ -3,7 +3,11 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![Spotipy Version](https://img.shields.io/badge/spotipy-2.23.0-green)](https://spotipy.readthedocs.io/)
 
-BeatBoost is your AI-powered productivity sidekick that automagically curates high-energy rap tracks into your Spotify playlist. Perfect for coding marathons, gym sessions, or anytime you need **lyrical fuel for your grind**. 🔥
+
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/ada6af4f-8e64-4200-9453-2fc3fe256cc9" />
+
+
+ sidekick that automagically curates high-energy rap tracks into your Spotify playlist. Perfect for coding marathons, gym sessions, or anytime you need **lyrical fuel for your grind**. 🔥
 
 
 
