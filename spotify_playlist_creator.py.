@@ -1,0 +1,60 @@
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+
+# Spotify API credentials
+CLIENT_ID = '90331a86438c4883bebe19c3c3384f91'
+CLIENT_SECRET = '3c720b1974d94d18ac6b1395920ad770'
+REDIRECT_URI = 'http://127.0.0.1:8888/callback'
+
+# Create Spotify API client with the necessary scope
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
+    client_id=CLIENT_ID,
+    client_secret=CLIENT_SECRET,
+    redirect_uri=REDIRECT_URI,
+    scope="playlist-modify-public",
+    cache_path=".cache"  # Explicitly set cache path
+))
+
+# Get the current user's details
+user = sp.current_user()
+user_id = user['id']  # Extract the user ID
+
+# Create a new public playlist
+playlist_name = input("Enter a name for the playlist: ")
+playlist = sp.user_playlist_create(user_id, playlist_name, public=True)
+print(f"Playlist '{playlist_name}' created! URL: {playlist['external_urls']['spotify']}")
+
+# Function to search for a song by name
+def add_song_by_name(song_name):
+    results = sp.search(q=song_name, type='track', limit=1)
+    if results['tracks']['items']:
+        track_uri = results['tracks']['items'][0]['uri']
+        sp.playlist_add_items(playlist['id'], [track_uri])
+        print(f"Added song: {results['tracks']['items'][0]['name']}")
+    else:
+        print("No song found with that name.")
+
+# Function to search for songs by genre
+def add_songs_by_genre(genre):
+    results = sp.search(q=f"genre:{genre}", type='track', limit=10)
+    if results['tracks']['items']:
+        track_uris = [track['uri'] for track in results['tracks']['items']]
+        sp.playlist_add_items(playlist['id'], track_uris)
+        print(f"Added {len(track_uris)} songs of genre '{genre}' to the playlist.")
+    else:
+        print("No songs found for that genre.")
+
+# User input to add songs
+while True:
+    choice = input("\nType '1' to add a song by name, '2' to add songs by genre, or 'q' to quit: ")
+    if choice == '1':
+        song_name = input("Enter the song name: ")
+        add_song_by_name(song_name)
+    elif choice == '2':
+        genre = input("Enter the genre: ")
+        add_songs_by_genre(genre)
+    elif choice == 'q':
+        print("Exiting. Enjoy your playlist!")
+        break
+    else:
+        print("Invalid option. Please try again.")
