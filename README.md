@@ -5,7 +5,7 @@
 
 BeatBoost is your AI-powered productivity sidekick that automagically curates high-energy rap tracks into your Spotify playlist. Perfect for coding marathons, gym sessions, or anytime you need **lyrical fuel for your grind**. 🔥
 
-![Playlist Preview](assets/preview.png)
+
 
 ---
 
