@@ -1,4 +1,4 @@
-# 🎧 BeatBoost: Auto-Add Focus-Driven Rap Tracks to Your Spotify Playlist
+# 🎧 808 AUTOMATION
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![Spotipy Version](https://img.shields.io/badge/spotipy-2.23.0-green)](https://spotipy.readthedocs.io/)
