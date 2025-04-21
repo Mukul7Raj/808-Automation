@@ -39,5 +39,21 @@ BeatBoost is your AI-powered productivity sidekick that automagically curates hi
 ```bash
 git clone https://github.com/your-username/BeatBoost.git
 cd BeatBoost
+pip install -r requirements.txt
+
+**Configure Spotify API
+Create new app in Spotify Developer Dashboard
+
+Add http://localhost:8888/callback as Redirect URI
+
+Create .env file with your credentials:
+
+CLIENT_ID=your_client_id_here
+CLIENT_SECRET=your_client_secret_here
+REDIRECT_URI=http://localhost:8888/callback
+
+Run BeatBoost
+python beatboost.py --mode focus --intensity high**
+
 
 
