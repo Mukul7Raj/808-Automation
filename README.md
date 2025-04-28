@@ -23,7 +23,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stacks
 
 - **Python 3** (Core scripting)
 - **Spotipy** (Spotify Web API wrapper)
